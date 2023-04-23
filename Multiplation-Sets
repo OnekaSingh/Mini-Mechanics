@@ -7,7 +7,7 @@ void main()
     tot = 0; //set all starting positions to 0
     a[tot]=0;
 	
-    while(a[tot] <= 30) {
+    while(a[tot] <= 30) { //change 30??
         printf("This is the table of %d\n", tot);
         for(i = 0; i <= 10; i++) {
             a[i] = i * tot;
