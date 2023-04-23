@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+//numbers: 5 1 3 6 8 2 7 9 4
+
+void sort(int a[]);
+
+void main()
+{
+
+int a[9];
+
+    a[0] = 5; //should be least
+    a[1] = 1;
+    a[2] = 3;
+    a[3] = 6;
+    a[4] = 8;
+    a[5] = 2;
+    a[6] = 7;
+    a[7] = 9;
+    a[8] = 4; //should be greatest
+
+sort(a);
+
+}
+
+void sort(int a[]) {
+
+    int temp, x, y;
+    
+        for(x = 0; x <=8; x++) { //starts at a[0] and goes to a[7]
+            for(y = 0; y <= 8; y++) { //starts at a[1] and goes to a[8]
+                if(a[x] > a[y]) { //if higher a is greater in value (send it to bottom of list)
+                    temp = a[x]; //temp equals a[x] value
+                    a[x] = a[y]; //greater value goes down
+                    a[y] = temp; //lesser value goes up
+                }
+            }
+        }
+    
+    printf("%d, %d, %d, %d, %d, %d, %d, %d, %d", a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8]); //prints 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+}
