@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void main()
+{
+
+    int i, a[11], tot; //creating 11 different multiplication tables
+    tot = 0; //set all starting positions to 0
+    a[tot]=0;
+	
+    while(a[tot] <= 30) {
+        printf("This is the table of %d\n", tot);
+        for(i = 0; i <= 10; i++) {
+            a[i] = i * tot;
+            printf("%d * %d = %d\n", tot, i, a[i]);
+        }
+		printf("\n---------------------\n");
+		tot++;
+    }
+}
