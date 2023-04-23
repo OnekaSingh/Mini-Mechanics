@@ -1,15 +1,20 @@
 #include <stdio.h>
 
+void table(int a[], int x);
+
 void main()
 {
 
-    int x, a[11], i; //adjust parameters if needed
-    
-    x = 10; //multiplier: 10
-    
+    int a[11], x;
+    x = 10; //chosen multiplier (can be changed respectively)
+    table(a, x);
+
+}
+
+void table(int a[], int x) { //variable parameters (taken from main)
+    int i; //adjust parameters if needed
     for(i = 0; i < 11; i++) { //table from 0 to 10
             a[i] = i * x; //multiplies index by multiplier
             printf("%d * %d = %d\n", x, i, a[i]);
     }
-
 }
