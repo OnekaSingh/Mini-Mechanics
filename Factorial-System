@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void factorial(int b);
+
+void main()
+{
+
+    factorial(4);
+    
+}
+
+void factorial(int b) {
+    
+        int i, h;
+        
+    h = b;
+
+    while(b > 1) { //10 
+        h = h* (b - 1); //90 = 10 * 9
+        b--;
+    }
+
+    printf("%d \n", h);
+    
+}
